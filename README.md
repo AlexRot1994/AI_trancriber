@@ -1,22 +1,20 @@
-# Audio Transcriber mit KI
+# Audio Transcriber mit OpenAI Whisper API
 
-Ein einfaches Python-Projekt zur Transkription von Audiodateien mit OpenAI Whisper und Streamlit.
+Ein einfaches Projekt, um Audiodateien per Streamlit mit der OpenAI Whisper API zu transkribieren.
 
-## Funktionen
-- Unterstützt mp3, wav, m4a
-- Echtzeit-Transkription im Browser
-- Docker-kompatibel
+## Anforderungen
 
-## Installation lokal
+- OpenAI API Key (https://platform.openai.com/account/api-keys)
+
+## Lokale Ausführung
 
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Mit Docker
+## Geheimnis hinzufügen (für Streamlit Cloud)
 
-```bash
-docker build -t audio-transcriber .
-docker run -p 8501:8501 audio-transcriber
-```
+In Streamlit Cloud unter "Secrets" folgendes hinzufügen:
+
+- `OPENAI_API_KEY`: dein API-Key von OpenAI
